@@ -2,7 +2,7 @@ node
   {
   stage('checkout')
     {
-    checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[credentialsId: '1f1be30a-9c85-432a-b856-b40ec1b90cf7', url: 'https://github.com/cumbumking/multi-branch-pipeline.git']]])
+    checkout scm
     }
   stage('deploy')
     {
